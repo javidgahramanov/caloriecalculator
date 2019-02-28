@@ -386,9 +386,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="assets\wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1.eot~-9hbgac.eot" />
     <Content Include="assets\wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1.eot" />
     <Content Include="assets\wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1.ttf" />
@@ -460,7 +457,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Scripts\popper.min.js.map" />
     <Content Include="Scripts\popper.js.map" />
-    <None Include="Views\Home\İndex.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -470,7 +468,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -518,7 +515,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>28306</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:28306/</IISUrl>
+          <IISUrl>http://localhost:28302/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
