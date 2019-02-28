@@ -1,0 +1,135 @@
+﻿@using System.Collections
+@using CalorieCalculatorProyekt.Models.Concrete
+
+<script language="javascript">
+    jQuery(document).ready(function ($) {
+        $("#CategoryId").on("change", function () {
+            $("#imgLoading").css("display", "block");
+            jQuery.post("/api/FoodProduct/get", { CategoryId: this.value })
+                .done(function (result) {
+                    $("#imgLoading").css("display", "none");
+                    $('#foods').empty();
+                    $('#foods').append($('<option>').text("Seçin"));
+
+                    $.each(result, function (i, value) {
+                        $('#foods').append($('<option>').text(value.Name).attr('value', value.Id));
+                    });
+
+                });
+        });
+
+        $("#btnCalculateFood").click(function (e) {
+            e.preventDefault();
+            var gram = $("#gram").val();
+            var foodId = $("#foods").val();
+            jQuery.post("/api/FoodProduct/GetProductDetail", { Id: foodId }).done(function (result) {
+
+                jQuery.each(result, function (property, value) {
+                    var calculateByIngredient = ((gram * value) / 100).toFixed(2);
+                    $("#" + property + "_value").text(value+" / "+parseFloat(calculateByIngredient));
+
+                });
+
+            });
+
+        });
+    });
+</script>
+<div class="row" id="row-main">
+
+    <div class="col-lg-6 ">
+        <div class="row" id="content-row">
+
+            <div class="col-md-12">
+                <p><h1>Kalori kalkulyatoru</h1>
+                <p class="lead">
+                    Seçdiyiniz qidaya uyğun  qida dəyərini hesablayın
+                </p>
+                <hr class="add_bottom_30">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        @using (Html.BeginForm("index", "Calorie"))
+                        {
+
+                            <div class="form-group">
+                                Kateqoriya
+                                <div class="styled-select">
+                                    <select class="form-control col-md-3" name="CategoryId" id="CategoryId">
+                                        <option value="0">Seçin</option>
+                                        @foreach (var category in (IEnumerable<Category>)ViewData["categories"])
+                                        {
+                                            <option value="@category.CategoryId">@category.CategoryName</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                Qida <img src="/assets/img/peploading.gif" width="20" id="imgLoading" style="display: none;" />
+                                <div class="styled-select">
+                                    <select class="form-control col-md-3" name="weight_select" id="foods"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                Miqdarı (qr)
+                                <input type="text" class="form-control" name="gram" id="gram">
+                            </div>
+
+                                <input type="hidden" name="calculator" value="bmi_calculator" />
+                                <button id="btnCalculateFood" class="button_medium">Hesabla</button>
+                        }
+
+                    </div>
+                </div><!-- End row -->
+
+            </div><!-- End col-md-12 -->
+        </div><!-- End content-row -->
+    </div><!-- End col-lg-6-->
+    <div class="col-lg-6 ">
+        <div class="row" id="content-row">
+
+            <div class="result">
+                <h3>Cəmi Kalori</h3>
+                <div id="Calorie_value" class="no_margin_bottom">0.0</div>
+
+                <div class="row" id="activietes_detail">
+                    <div class="col-md-12 text-left">
+                        <h4>QİDA MADDƏLƏRİ</h4>
+                        <ul>
+                            <li>Zülallar <span id="Protein_value">0.0</span></li>
+                            <li>Yağlar <span id="Fat_value"> 0.0</span></li>
+                            <li>Karbohidratlar <span id="Carbohydrate_value"> 0.0</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-12 text-left">
+                        <h4>MİNERAL MADDƏLƏR</h4>
+                        <ul>
+                            <li>Natrium <span id="Natrium_value">0.0</span></li>
+                            <li>Kalsium <span id="Calcium_value"> 0.0</span></li>
+                            <li>Kalium <span id="Potassium_value"> 0.0</span></li>
+                            <li>Maqnezium <span id="Magnesium_value"> 0.0</span></li>
+                            <li>Fosfor <span id="Phosphor_value"> 0.0</span></li>
+                            <li>Dəmir <span id="Iron_value"> 0.0</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-12 text-left">
+                        <h4>VİTAMİNLƏR</h4>
+                        <ul>
+                            <li>Karotin <span id="Karotin_value">0.0</span></li>
+                            <li>A <span id="A_value"> 0.0</span></li>
+                            <li>B1 <span id="B1_value"> 0.0</span></li>
+                            <li>B2 <span id="B2_value"> 0.0</span></li>
+                            <li>PP <span id="PP_value"> 0.0</span></li>
+                            <li>C <span id="C_value"> 0.0</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End main-row -->

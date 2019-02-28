@@ -1,0 +1,110 @@
+﻿@using System.Collections
+@using CalorieCalculatorProyekt.Models.Concrete
+@model  IEnumerable<CalorieCalculatorProyekt.Models.Concrete.Activities>
+
+<div class="row" id="row-main">
+    <div class="col-lg-6 col-md-5" id="main-img-container">
+        <div id="main-img">
+            <img src="/assets/wp-content/uploads/2016/04/01.jpg" alt="" />
+        </div><!-- End main-img -->
+    </div><!-- End main-img-container -->
+
+    <script>
+        var MET_DATA_LIA = {
+            @ViewData["varJavaScriptActivities"]
+        };
+    </script>
+
+    <div class="col-lg-6 col-lg-offset-6 col-md-7 col-md-offset-5">
+        <div class="row" id="content-row">
+
+            <div class="col-md-12">
+                <h2>Hərəkət növünə uyğun yandırılan kalori</h2>
+                <p class="lead">
+                    Gün ərzində etidyiniz hərəkətləri və sərf etdiyiniz vaxtı qeyd edərək,yandırdğınız kalorini hesablayın.
+                </p>
+                <hr class="add_bottom_30">
+
+                <div class="row">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"><input type="text" name="Weight" class="form-control" placeholder="Çəki"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="styled-select">
+                                        <select class="form-control" name="weight_select">
+                                            <option value="kilo">KG</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- End row -->
+
+                        <div id="activies" class="row clearfix">
+
+                            @{
+
+                                int i = 5;
+                                string divClose = " ";
+
+                            }
+
+                            @foreach (var activity in (IEnumerable<Activities>)ViewData["activities"])
+                            {
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <div class="hours">Saat <input type="text" name="hours_@activity.ActivityId" value="0"></div>
+                                        <input type="checkbox" name="@activity.ActivityId" id="@activity.ActivityId"><label for="@activity.ActivityId" style="font-weight: normal; font-size: 14px;"><span></span>@activity.ActivityName</label>
+                                    </div>
+
+                                </div>
+
+                            }
+
+                            <!-- End col-md-6 -->
+
+
+                            <input type="hidden" name="calculator" value="easy_burned" />
+                        </div><!-- End activities -->
+                    </form>
+
+                    <p><em>*Sərf edilən saatı və hərəkət növünü seçməyi unutmayın</em></p>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12 text-center"><button id="selectBtn" class="button_medium">Hesabla</button></div>
+                    </div>
+
+
+                    <div class="result">
+                        <h3>Cəmi yandırılan  kalori</h3>
+                        <div id="easy_cal_burned" class="no_margin_bottom">0.0</div>
+
+                        <div class="row" id="activietes_detail">
+                            <div class="col-md-12 text-left">
+                                <h4>Aktivlik növləri </h4>
+                                <ul>
+                                    @foreach (var activity in (IEnumerable<Activities>)ViewData["activities"])
+                                    {
+                                        <li>@activity.ActivityName <span id="@activity.ActivityId@Html.Raw("_value")"> 0.0</span></li>
+                                    }
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- End result -->
+
+
+                </div><!-- End row --><hr>
+
+
+
+            </div><!-- End col-md-12 -->
+        </div><!-- End content-row -->
+    </div><!-- End col-lg-6-->
+</div>

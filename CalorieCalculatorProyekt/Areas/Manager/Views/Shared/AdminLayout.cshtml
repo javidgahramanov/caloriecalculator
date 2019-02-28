@@ -1,0 +1,358 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shamcey - Metro Style Admin Template</title>
+    <link rel="stylesheet" href="~/Areas/Manager/Content/css/style.default.css" type="text/css" />
+
+    <link href="~/Areas/Manager/Content/css/responsive-tables.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Areas/Manager/Content/css/responsive-tables.css" />
+    <script src="~/Areas/Manager/Content/js/jquery-1.9.1.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/jquery-migrate-1.1.1.min.js"></script>
+
+    <script src="~/Areas/Manager/Content/js/modernizr.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/jquery.cookie.js"></script>
+    <script src="~/Areas/Manager/Content/js/jquery.uniform.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/flot/jquery.flot.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/flot/jquery.flot.resize.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/responsive-tables.js"></script>
+    <script src="~/Areas/Manager/Content/js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Areas/Manager/Content/tiny_mce/tiny_mce.js"></script>
+    <script type="text/javascript">
+        tinyMCE.init({
+            // General options
+            mode: "textareas",
+            theme: "advanced",
+            plugins: "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+
+            // Theme options
+            theme_advanced_buttons1: "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect",
+            theme_advanced_buttons2: "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+            theme_advanced_buttons3: "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+            theme_advanced_buttons4: "insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage",
+            theme_advanced_toolbar_location: "top",
+            theme_advanced_toolbar_align: "left",
+            theme_advanced_statusbar_location: "bottom",
+            theme_advanced_resizing: true,
+
+            // Skin options
+            skin: "o2k7",
+            skin_variant: "silver",
+
+            // Example content CSS (should be your site CSS)
+            content_css: "css/example.css",
+
+            // Drop lists for link/image/media/template dialogs
+            template_external_list_url: "js/template_list.js",
+            external_link_list_url: "js/link_list.js",
+            external_image_list_url: "js/image_list.js",
+            media_external_list_url: "js/media_list.js",
+
+            // Replace values for the template plugin
+            template_replace_values: {
+                username: "Some User",
+                staffid: "991234"
+            }
+        });
+    </script>
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+    <div class="mainwrapper">
+        <div class="header">
+            <div class="logo">
+                <a href="dashboard.html"><img src="~/Areas/Manager/Content/images/logo.png" alt="" /></a>
+            </div>
+            <div class="headerinner">
+                <ul class="headmenu">
+                    <li class="odd">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="count">4</span>
+                            <span class="head-icon head-message"></span>
+                            <span class="headmenu-label">Messages</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-header">Messages</li>
+                            <li><a href=""><span class="icon-envelope"></span> New message from <strong>Jack</strong> <small class="muted"> - 19 hours ago</small></a></li>
+                            <li><a href=""><span class="icon-envelope"></span> New message from <strong>Daniel</strong> <small class="muted"> - 2 days ago</small></a></li>
+                            <li><a href=""><span class="icon-envelope"></span> New message from <strong>Jane</strong> <small class="muted"> - 3 days ago</small></a></li>
+                            <li><a href=""><span class="icon-envelope"></span> New message from <strong>Tanya</strong> <small class="muted"> - 1 week ago</small></a></li>
+                            <li><a href=""><span class="icon-envelope"></span> New message from <strong>Lee</strong> <small class="muted"> - 1 week ago</small></a></li>
+                            <li class="viewmore"><a href="messages.html">View More Messages</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">
+                            <span class="count">10</span>
+                            <span class="head-icon head-users"></span>
+                            <span class="headmenu-label">New Users</span>
+                        </a>
+                        <ul class="dropdown-menu newusers">
+                            <li class="nav-header">New Users</li>
+                            <li>
+                                <a href="">
+                                    <img src="images/photos/thumb1.png" alt="" class="userthumb" />
+                                    <strong>Draniem Daamul</strong>
+                                    <small>April 20, 2013</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/photos/thumb2.png" alt="" class="userthumb" />
+                                    <strong>Shamcey Sindilmaca</strong>
+                                    <small>April 19, 2013</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/photos/thumb3.png" alt="" class="userthumb" />
+                                    <strong>Nusja Paul Nawancali</strong>
+                                    <small>April 19, 2013</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/photos/thumb4.png" alt="" class="userthumb" />
+                                    <strong>Rose Cerona</strong>
+                                    <small>April 18, 2013</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/photos/thumb5.png" alt="" class="userthumb" />
+                                    <strong>John Doe</strong>
+                                    <small>April 16, 2013</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="odd">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">
+                            <span class="count">1</span>
+                            <span class="head-icon head-bar"></span>
+                            <span class="headmenu-label">Statistics</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-header">Statistics</li>
+                            <li><a href=""><span class="icon-align-left"></span> New Reports from <strong>Products</strong> <small class="muted"> - 19 hours ago</small></a></li>
+                            <li><a href=""><span class="icon-align-left"></span> New Statistics from <strong>Users</strong> <small class="muted"> - 2 days ago</small></a></li>
+                            <li><a href=""><span class="icon-align-left"></span> New Statistics from <strong>Comments</strong> <small class="muted"> - 3 days ago</small></a></li>
+                            <li><a href=""><span class="icon-align-left"></span> Most Popular in <strong>Products</strong> <small class="muted"> - 1 week ago</small></a></li>
+                            <li><a href=""><span class="icon-align-left"></span> Most Viewed in <strong>Blog</strong> <small class="muted"> - 1 week ago</small></a></li>
+                            <li class="viewmore"><a href="charts.html">View More Statistics</a></li>
+                        </ul>
+                    </li>
+                    <li class="right">
+                        <div class="userloggedinfo">
+                            <img src="images/photos/thumb1.png" alt="" />
+                            <div class="userinfo">
+                                <h5>Juan Dela Cruz <small>- juan@themepixels.com</small></h5>
+                                <ul>
+                                    <li><a href="editprofile.html">Edit Profile</a></li>
+                                    <li><a href="">Account Settings</a></li>
+                                    <li><a href="index.html">Sign Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!--headmenu-->
+            </div>
+        </div>
+        <script src="~/Areas/Manager/Content/js/jvd.js"></script>
+        <div class="leftpanel">
+
+            <div class="leftmenu">
+                <ul class="nav nav-tabs nav-stacked">
+                    <li class="nav-header">Navigation</li>
+                    <li class="active"><a href="/Admin/Home/"><span class="iconfa-laptop"></span> ADMIN ƏSAS</a></li>
+
+                    <li class="dropdown">
+                        <a href=""><span class="iconfa-pencil"></span> Kateqoriyalar</a>
+                        <ul>
+                            <li>@Html.ActionLink("Siyahı", "Index", "Category")</li>
+
+                            <li>@Html.ActionLink("Əlavə et", "AddCategory", "Category")</li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href=""><span class="iconfa-pencil"></span> Menyu</a>
+                        <ul>
+                            <li>@Html.ActionLink("Siyahı", "Index", "SiteMenu")</li>
+
+                            <li>@Html.ActionLink("Əlavə et", "AddSiteMenu", "SiteMenu")</li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href=""><span class="iconfa-pencil"></span> Postlar</a>
+                        <ul>
+                            <li>@Html.ActionLink("Siyahı", "Index", "BlogPost")</li>
+
+                            <li>@Html.ActionLink("Əlavə et", "AddBlogPost", "BlogPost")</li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href=""><span class="iconfa-pencil"></span> Bannerlər</a>
+                        <ul>
+                            <li>@Html.ActionLink("Siyahı", "Index", "Banner")</li>
+
+                            <li>@Html.ActionLink("Əlavə et", "AddBanner", "Banner")</li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href=""><span class="iconfa-pencil"></span> Foto Qalereya</a>
+                        <ul>
+                            <li>@Html.ActionLink("Siyahı", "Index", "Gallery")</li>
+
+                            <li>@Html.ActionLink("Əlavə et", "AddGallery", "Gallery")</li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href=""><span class="iconfa-pencil"></span> Adminlər</a>
+                        <ul>
+                            <li>@Html.ActionLink("Siyahı", "Index", "AdminUser")</li>
+
+                            <li>@Html.ActionLink("Əlavə et", "AddAdminUser", "AdminUser")</li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div><!--leftmenu-->
+
+        </div><!-- leftpanel -->
+
+        <div class="rightpanel">
+
+            <ul class="breadcrumbs">
+                <li><a href="dashboard.html"><i class="iconfa-home"></i></a> <span class="separator"></span></li>
+                <li>Dashboard</li>
+                <li class="right">
+                    <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-tint"></i> Color Skins</a>
+                    <ul class="dropdown-menu pull-right skin-color">
+                        <li><a href="default">Default</a></li>
+                        <li><a href="navyblue">Navy Blue</a></li>
+                        <li><a href="palegreen">Pale Green</a></li>
+                        <li><a href="red">Red</a></li>
+                        <li><a href="green">Green</a></li>
+                        <li><a href="brown">Brown</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="pageheader">
+                <input type="text" name="keyword" placeholder="To search type and hit enter..." />
+                <div class="pageicon"><span class="iconfa-laptop"></span></div>
+                <div class="pagetitle">
+                    <h5>All Features Summary</h5>
+                    <h1>Dashboard</h1>
+                </div>
+            </div><!--pageheader-->
+
+            <div class="maincontent">
+                <div class="maincontentinner">
+                    <div class="row-fluid">
+                        @RenderBody()
+                    </div><!--row-fluid-->
+
+                    <div class="footer">
+                        <div class="footer-left">
+                            <span>&copy; 2016. JVD MVC ADMIN v1.0 </span>
+                        </div>
+                        <div class="footer-right">
+                            <span>Designed by: <a href="http://gahramanov.net/">Javid Gahramanov</a></span>
+                        </div>
+                    </div><!--footer-->
+
+                </div><!--maincontentinner-->
+            </div><!--maincontent-->
+
+        </div><!--rightpanel-->
+
+    </div><!--mainwrapper-->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+
+            // simple chart
+            var flash = [[0, 11], [1, 9], [2, 12], [3, 8], [4, 7], [5, 3], [6, 1]];
+            var html5 = [[0, 5], [1, 4], [2, 4], [3, 1], [4, 9], [5, 10], [6, 13]];
+            var css3 = [[0, 6], [1, 1], [2, 9], [3, 12], [4, 10], [5, 12], [6, 11]];
+
+            function showTooltip(x, y, contents) {
+                jQuery('<div id="tooltip" class="tooltipflot">' + contents + '</div>').css({
+                    position: 'absolute',
+                    display: 'none',
+                    top: y + 5,
+                    left: x + 5
+                }).appendTo("body").fadeIn(200);
+            }
+
+
+            var plot = jQuery.plot(jQuery("#chartplace"),
+                   [{ data: flash, label: "Flash(x)", color: "#6fad04" },
+                  { data: html5, label: "HTML5(x)", color: "#06c" },
+                  { data: css3, label: "CSS3", color: "#666" }], {
+                      series: {
+                          lines: { show: true, fill: true, fillColor: { colors: [{ opacity: 0.05 }, { opacity: 0.15 }] } },
+                          points: { show: true }
+                      },
+                      legend: { position: 'nw' },
+                      grid: { hoverable: true, clickable: true, borderColor: '#666', borderWidth: 2, labelMargin: 10 },
+                      yaxis: { min: 0, max: 15 }
+                  });
+
+            var previousPoint = null;
+            jQuery("#chartplace").bind("plothover", function (event, pos, item) {
+                jQuery("#x").text(pos.x.toFixed(2));
+                jQuery("#y").text(pos.y.toFixed(2));
+
+                if (item) {
+                    if (previousPoint != item.dataIndex) {
+                        previousPoint = item.dataIndex;
+
+                        jQuery("#tooltip").remove();
+                        var x = item.datapoint[0].toFixed(2),
+                        y = item.datapoint[1].toFixed(2);
+
+                        showTooltip(item.pageX, item.pageY,
+                                        item.series.label + " of " + x + " = " + y);
+                    }
+
+                } else {
+                    jQuery("#tooltip").remove();
+                    previousPoint = null;
+                }
+
+            });
+
+            jQuery("#chartplace").bind("plotclick", function (event, pos, item) {
+                if (item) {
+                    jQuery("#clickdata").text("You clicked point " + item.dataIndex + " in " + item.series.label + ".");
+                    plot.highlight(item.series, item.datapoint);
+                }
+            });
+
+            //datepicker
+            jQuery('#datepicker').datepicker();
+
+            // tabbed widget
+            jQuery('.tabbedwidget').tabs();
+        });
+    </script>
+</body>
+</html>

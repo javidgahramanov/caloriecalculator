@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalorieCalculatorProyekt", "CalorieCalculatorProyekt\CalorieCalculatorProyekt.csproj", "{6A0279B9-D50C-4FB0-80AE-D53401E1086F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalorieCalculatorProyektTests", "CalorieCalculatorProyektTests\CalorieCalculatorProyektTests.csproj", "{17DF37CA-7D88-4280-8AFA-3479F09CDC34}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/javidgahramanov0023
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CalorieCalculatorProyekt\\CalorieCalculatorProyekt.csproj
+		SccProjectName1 = CalorieCalculatorProyekt
+		SccLocalPath1 = CalorieCalculatorProyekt
+		SccProjectUniqueName2 = CalorieCalculatorProyektTests\\CalorieCalculatorProyektTests.csproj
+		SccProjectName2 = CalorieCalculatorProyektTests
+		SccLocalPath2 = CalorieCalculatorProyektTests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A0279B9-D50C-4FB0-80AE-D53401E1086F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0279B9-D50C-4FB0-80AE-D53401E1086F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0279B9-D50C-4FB0-80AE-D53401E1086F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0279B9-D50C-4FB0-80AE-D53401E1086F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DF37CA-7D88-4280-8AFA-3479F09CDC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DF37CA-7D88-4280-8AFA-3479F09CDC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DF37CA-7D88-4280-8AFA-3479F09CDC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DF37CA-7D88-4280-8AFA-3479F09CDC34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

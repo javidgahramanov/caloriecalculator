@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+@model  CalorieCalculatorProyekt.Areas.Manager.Models.SystemUser
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shamcey - Metro Style Admin Template</title>
+
+    <link href="~/Areas/Manager/Content/css/style.default.css" rel="stylesheet" />
+
+
+    <script src="~/Areas/Manager/Content/js/jquery-1.9.1.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/jquery-migrate-1.1.1.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/jquery-ui-1.9.2.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/modernizr.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Manager/Content/js/jquery.cookie.js"></script>
+    <script src="~/Areas/Manager/Content/js/custom.js"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body class="loginpage">
+    <div class="loginpanel">
+        <div class="loginpanelinner">
+            <div class="logo animate0 bounceIn">
+                <img src="~/Areas/Manager/Content/images/logo.png" />
+            </div>
+
+            @using (Html.BeginForm("Index", "Login"))
+            {
+                <div class="inputwrapper login-alert">
+
+                </div>
+
+                <div class="inputwrapper animate1 bounceIn">
+
+                    @Html.TextBoxFor(x => x.Email, new { @placeholder = "E-mail" }) <br />
+                    @Html.ValidationMessageFor(x => x.Email)
+                </div>
+
+                <div class="inputwrapper animate2 bounceIn">
+                    @Html.PasswordFor(x => x.Password, new { @placeholder = "Şifrə" })
+                    <br />
+                    @Html.ValidationMessageFor(x => x.Password)
+
+
+                </div>
+                <div class="inputwrapper animate3 bounceIn">
+                    <button name="submit">Sign In</button>
+                </div>
+                <div class="inputwrapper animate4 bounceIn">
+                    <label><input type="checkbox" class="remember" name="signin" /> Keep me sign in</label>
+                </div>
+
+            }
+
+        </div><!--loginpanelinner-->
+    </div><!--loginpanel-->
+
+    <div class="loginfooter">
+        <p>&copy; 2013. Shamcey Admin Template. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

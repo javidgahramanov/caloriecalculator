@@ -1,0 +1,65 @@
+﻿<div class="row" id="row-main">
+    <div class="col-lg-6 col-md-5" id="main-img-container">
+        <div id="main-img">
+            <img src="/assets/wp-content/uploads/2016/04/01.jpg" alt="" />
+        </div><!-- End main-img -->
+    </div><!-- End main-img-container -->
+
+    <div class="col-lg-6 col-lg-offset-6 col-md-7 col-md-offset-5">
+        <div class="row" id="content-row">
+
+            <div class="col-md-12">
+
+
+                <p><h1>Bədən kütlə indeksi kalkulyatoru</h1>
+                <p class="lead">
+                    
+                </p>
+                <hr class="add_bottom_30">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <form>
+                            <div class="form-group"><input type="text" class="form-control" name="Weight" placeholder="Çəki"></div>
+
+                            <div class="form-group">
+                                <div class="styled-select">
+                                    <select class="form-control col-md-3" name="weight_select">
+                                        <option value="kilo">KG</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><input type="text" class="form-control" name="Height" placeholder="Boy"></div>
+
+                            <div class="form-group">
+                                <div class="styled-select">
+                                    <select class="form-control" name="height_select">
+                                        <option value="cm">CM</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="calculator" value="bmi_calculator" />
+                        </form>
+                        <button id="selectBtn" class="button_medium add_top">Hesabla</button>
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="result">
+                            <h3>Bədən kütlə indeksiniz</h3>
+                            <div id="bmi_value">0</div>
+                            <div id="indicator"></div>
+                        </div>
+
+                    </div>
+
+
+                </div><!-- End row -->
+
+            </div><!-- End col-md-12 -->
+        </div><!-- End content-row -->
+    </div><!-- End col-lg-6-->
+</div><!-- End main-row -->

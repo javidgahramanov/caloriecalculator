@@ -1,0 +1,100 @@
+/*
+Theme Name: Activity
+Theme URI: http://shtheme.com/demosd/activity
+Author: Verga Theme Team
+Author URI: http://vergatheme.com
+Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: activity
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.widget_calendar {float: none;}
+#wp-calendar {width: 100%; }
+#wp-calendar caption { 
+    background: none repeat scroll 0 0 #E9E9E9;
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center; 
+}
+#wp-calendar thead { font-size: 10px; }
+#wp-calendar thead th {
+    border: 1px solid #E9E9E9;
+    font-size: 13px;
+    padding: 8px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+#wp-calendar tbody { color: #aaa; }
+#wp-calendar tbody td { background: #f5f5f5; border: 1px solid #E9E9E9; text-align: center; padding:8px;}
+#wp-calendar tbody td#today {background: #29abe0;color: #fff;}
+#wp-calendar tbody td:hover { background: #fff; }
+#wp-calendar tbody .pad { background: none; }
+#wp-calendar tfoot {border: 1px solid #E9E9E9;}
+#wp-calendar tfoot #next { font-size: 12px; text-transform: uppercase; text-align: right; color: #83c99f;}
+#wp-calendar tfoot #prev { font-size: 12px; text-transform: uppercase; padding-top: 10px; color: #83c99f;}
+
+.widget select {max-width: 100%;padding: 5px;border: 1px solid #ccc; width: 100%;}
+.widget_text .textwidget img{max-width: 100%;height: auto;}
+.widget_text select, .widget_text input , .widget_text textarea  {max-width: 100%;padding: 5px;border: 1px solid #ccc; width: 100%;}
+.widget_text option {max-width: 100%;}
+
+.widget_nav_menu ul li, .widget_pages ul li {color: #827b7d;line-height: 28px;}
+.widget_nav_menu ul li ul, .widget_pages ul li ul {padding-left: 20px;}
+.widget_nav_menu ul li a, .widget_pages ul li a{color: #827b7d;}
+.widget_nav_menu ul li a:hover, .widget_pages ul li a:hover {color: #615C5C;}
+
+ul, ol {
+	padding-left: 10px;
+	list-style: none;
+}
+ input.submit{
+		border:none;
+	background:none;
+	color:#29abe0;
+	padding:7px 20px;
+	text-decoration:none; 
+	transition: background .5s ease; 
+	-moz-transition: background .5s ease; 
+	-webkit-transition: background .5s ease; 
+	-o-transition: background .5s ease; 
+	display:inline-block;
+	cursor:pointer;
+	font-weight:600;
+	text-transform:uppercase;
+	border: 1px solid #29abe0;
+	outline:none;
+	margin-bottom:20px;
+}
+input.submit:hover {background:#29abe0; color:#fff;}
+
+.review_strip{
+	background:#f8f8f8;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	position:relative;
+	padding:15px 15px 10px 15px;
+	margin-top:20px;
+}
+textarea.form-control{
+	height:200px;
+}
+body.logged-in #main-wrapper header, body.logged-in #main-wrapper #row-main, body.logged-in #main-wrapper .flexslider{
+	top: 32px !important;
+}
+body.logged-in #main-wrapper #row-main{
+	position: relative;
+}
+body {
+	line-height: 22px !important;
+}
+#content-row{
+	padding-top: 70px !important;
+}

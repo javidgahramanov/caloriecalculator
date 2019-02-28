@@ -1,0 +1,88 @@
+﻿<div class="row" id="row-main">
+    <div class="col-lg-6 col-md-5" id="main-img-container">
+        <div id="main-img">
+            <img src="/assets/wp-content/uploads/2016/04/01.jpg" alt="" />
+        </div><!-- End main-img -->
+    </div><!-- End main-img-container -->
+
+    <div class="col-lg-6 col-lg-offset-6 col-md-7 col-md-offset-5">
+        <div class="row" id="content-row">
+
+            <div class="col-md-12">
+
+
+                <p><h1>Gündəlik kalori ehtiyacı</h1>
+                <p class="lead">
+                    Məlumatlarınızı daxil edərək gündəlik kalori ehtiyacınızı hesablayın
+                </p>
+                <hr class="add_bottom_30">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                        <form>
+                            <div class="form-group"><input type="text" class="form-control" name="Age" placeholder="Yaş"></div>
+                            <div class="form-group"><input type="text" class="form-control" name="Weight" placeholder="Çəki"></div>
+
+                            <div class="form-group">
+                                <div class="styled-select">
+                                    <select class="form-control" name="weight_select">
+                                        <option value="kilo">Kq</option>
+                                        @*<option value="pounds">Pounds</option>*@
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><input type="text" class="form-control" name="Height" placeholder="Boy"></div>
+
+                            <div class="form-group">
+                                <div class="styled-select">
+                                    <select class="form-control" name="height_select">
+                                        <option value="cm">cm</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group add_top">
+                                <input type="radio" value="Male" name="Male" id="Male"><label for="Male" style="margin-right:30px;"><span></span>Kişi</label>
+                                <input type="radio" value="Female" name="Female" id="Female"><label for="Female"><span></span>Qadın</label>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="styled-select">
+                                    <select class="form-control" name="exercise_level">
+                                        <option value="nospec">Hərəkətsiz (çarpayıda)</option>
+                                        <option value="sedentary">Oturaq (az və ya heç aktivlik olmadığı halda, ofis işi və s.)</option>
+                                        <option value="light">Yüngül fəal (yüngül məşq/idman 1-3 gün/həftə)</option>
+                                        <option value="moderate">Orta fiziki aktiv iş (məşqsiz)</option>
+                                        <option value="moderate">Orta fəal (orta məşq/idman 6-7 gün/həftə)</option>
+                                        <option value="hard">Çox aktiv (hər gün ağır məşq,və ya gündə 2 dəfə məşq)</option>
+                                        <option value="nonstop">Həddən artıq aktiv (gün ərzində 2 və daha çox ağır məşq –idmançılar, atletlər və s. )</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="hidden" name="calculator" value="daily_calorie" />
+                        </form>
+                        <button id="selectBtn" class="button_medium add_top">Hesabla</button>
+                    </div><!-- End col-md-6 -->
+
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="result">
+                            <h3>Kalori ehtiyacınız</h3>
+                            <div id="your_cal_intake">0.0</div>
+                        </div>
+                        @*<div class="result">
+                            <h3>Lowest Daily Calories</h3>
+                            <div id="bmr_value">0.0</div>
+                        </div>*@
+                    </div><!-- End col-md-6-->
+
+
+                    </div><!-- End row --><hr>
+                    
+
+            </div><!-- End col-md-12 -->
+        </div><!-- End content-row -->
+    </div><!-- End col-lg-6-->
+</div>
